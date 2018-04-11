@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Http\Requests\CreateMessageResuest;
 
 class PageController extends Controller
 {
@@ -37,13 +38,12 @@ class PageController extends Controller
       return view('saludo', compact('nombre', 'html', 'script', 'consolas'));
    }
 
-   public function mensajes(Request $request)
+   public function mensajes(CreateMessageResuest $request)
    //Si el request solo se pasa como parametro, no aplicará para todos los métodos si no solo parra aquellos que pase el parámetro
    {
-       //return $request->all();
-      if ($request->has('nombre')) {
-         return "Si tiene nombre, es " . $request->input('nombre');
-      }
-      return "No tiene nombre";
+      $data = $request->all(); //Procesar los datos del formulario
+
+      //redirección
+      return back()->with('info', 'Tu mensaje ha enviado correctamente :)');
    }
 }
