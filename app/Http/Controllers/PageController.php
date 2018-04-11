@@ -15,6 +15,12 @@ class PageController extends Controller
       $this->request = $request;
    }*/
 
+   public function __construct()
+   {
+      //$this->middleware('example', ['except' => ['home']]);
+      $this->middleware('example', ['only' => ['home']]);
+   }
+
    public function home()
    {
       return view('home');

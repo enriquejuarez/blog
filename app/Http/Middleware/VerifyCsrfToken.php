@@ -13,6 +13,6 @@ class VerifyCsrfToken extends Middleware
      */
     protected $except = [
         //aqui definimos la ruta que no queremos que sea verificada
-        'contacto'
+        'mensajes'
     ];
 }
