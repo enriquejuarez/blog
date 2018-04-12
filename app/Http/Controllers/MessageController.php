@@ -49,7 +49,7 @@ class MessageController extends Controller
         ]);
 
         //Redireccionar
-        return redirect()->route('message.index');
+        return redirect()->route('mensajes.index');
     }
 
     /**
@@ -92,7 +92,7 @@ class MessageController extends Controller
             "updated_at" => Carbon::now(), 
         ]);
 
-        return redirect()->route('message.index');
+        return redirect()->route('mensajes.index');
     }
 
     /**
@@ -104,6 +104,6 @@ class MessageController extends Controller
     public function destroy($id)
     {
         DB::table('messages')->where('id', $id)->delete();
-        return redirect()->route('messages.index');
+        return redirect()->route('mensajes.index');
     }
 }

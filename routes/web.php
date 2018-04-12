@@ -21,7 +21,11 @@ Route::post('contacto', 'PageController@mensajes');
 
 Route::get('saludos/{nombre?}', ['as' => 'saludos', 'uses' => 'PageController@saludo'])->where('nombre', "[A-Za-z]+");
 
-Route::get('mensajes', ['as' => 'message.index', 'uses' => 'MessageController@index']);
+
+/*Nombre del recurso y nombre del controlador, para un diseño REST*/
+Route::resource('mensajes', 'MessageController');
+
+/*Route::get('mensajes', ['as' => 'message.index', 'uses' => 'MessageController@index']);
 
 Route::get('mensajes/create', ['as' => 'message.create', 'uses' => 'MessageController@create']);
 
@@ -33,5 +37,5 @@ Route::get('mensajes/{id}/edit', ['as' => 'message.edit', 'uses' => 'MessageCont
 
 Route::put('mensajes/{id}', ['as' => 'message.update', 'uses' => 'MessageController@update']);
 
-Route::delete('mensajes/{id}', ['as' => 'message.destroy', 'uses' => 'MessageController@destroy']);
+Route::delete('mensajes/{id}', ['as' => 'message.destroy', 'uses' => 'MessageController@destroy']);*/
 

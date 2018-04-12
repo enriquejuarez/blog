@@ -6,7 +6,7 @@
 	@if(session()->has('info'))
 		<h3>{{ session('info') }}</h3>
 	@else
-		<form method="POST" action="{{ route('messages.store') }}">
+		<form method="POST" action="{{ route('mensajes.store') }}">
 			<label for="nombre">
 				Nombre
 				<input type="text" name="nombre" value="{{old('nombre')}}">

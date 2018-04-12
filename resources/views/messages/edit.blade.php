@@ -2,7 +2,7 @@
 
 @section('contenido')
    <h1>Editar mensaje de {{ $message->mensaje  }}</h1>
-   <form method="POST" action="{{ route('message.update', $message->id) }}">
+   <form method="POST" action="{{ route('mensajes.update', $message->id) }}">
       {!! method_field('PUT') !!}
       {!! csrf_field() !!}
       <label for="nombre">
