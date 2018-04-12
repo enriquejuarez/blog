@@ -22,11 +22,12 @@
             return request()->is($url) ? 'active' : '';
          }
       ?>
-      <h1>{{ request()->is('/') ? 'Estas en el home' : 'No estas en el home' }}</h1>
+      <!-- <h1>{{ request()->is('/') ? 'Estas en el home' : 'No estas en el home' }}</h1> -->
       <nav>
          <a class="{{ activeMenu('/') }}" href="{{ route('home') }}">Inicio</a>
          <a class="{{ activeMenu('saludos/*') }}" href="{{ route('saludos', 'carlos') }}">Saludos</a>
-         <a class="{{ activeMenu('contactame') }}" href="{{ route('message.create') }}">Contactos</a>
+         <a class="{{ activeMenu('mensajes/create') }}" href="{{ route('message.create') }}">Contactos</a>
+         <a class="{{ activeMenu('mensajes') }}" href="{{ route('message.index') }}">Mensajes</a>
       </nav>
    </header>
    @yield('contenido')
