@@ -7,6 +7,7 @@
 		<h3>{{ session('info') }}</h3>
 	@else
 		<form method="POST" action="{{ route('mensajes.store') }}">
+			{!! csrf_field() !!}
 			<label for="nombre">
 				Nombre
 				<input type="text" name="nombre" value="{{old('nombre')}}">
