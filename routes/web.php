@@ -11,6 +11,16 @@
 |
 */
 
+/*Route::get('test', function(){
+	$user =  new App\User;
+	$user->name = 'carlos';
+	$user->email = 'caenjuji@gmail.com';
+	$user->password = bcrypt('123123');
+	$user->save();
+
+	return $user;
+});*/
+
 /*//forma de utilizar un middleware
 Route::get('/', ['as' => 'home', 'uses' => 'PageController@home'])->middleware('example');*/
 Route::get('/', ['as' => 'home', 'uses' => 'PageController@home']);
@@ -20,3 +30,6 @@ Route::get('saludos/{nombre?}', ['as' => 'saludos', 'uses' => 'PageController@sa
 
 /*Nombre del recurso y nombre del controlador, para un diseño REST*/
 Route::resource('mensajes', 'MessageController');
+
+Route::get('login', 'auth\LoginController@showLoginForm');
+//Route::post('login', 'auth\LoginController@login');

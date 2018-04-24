@@ -20,11 +20,6 @@ class PageController extends Controller
       return view('home');
    }
 
-   public function contact()
-   {
-      return view('contactos');
-   }
-
    public function saludo($nombre="CarlosEnrique")
    {
       $html = "<h2>Contenido HTML</h2>";
