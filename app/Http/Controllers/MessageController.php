@@ -11,6 +11,11 @@ use App\Http\Requests\CreateMessageRequest;
 
 class MessageController extends Controller
 {
+
+    function __construct()
+    {
+        $this->middleware('auth', ['except' =>['create', 'store']]);
+    }
     /**
      * Display a listing of the resource.
      *
@@ -50,7 +55,7 @@ class MessageController extends Controller
         //segunda forma de guardar datos con eloquent
         Message::create($request->all());
         //dd($request->all());
-        return redirect()->route('mensajes.index');
+        return redirect()->route('mensajes.create')->with('info', 'Hemos recibido tu mensaje');
     }
 
     /**

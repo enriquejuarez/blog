@@ -7,5 +7,6 @@
 <body>
 	<h1>No pudimos encontrar esta pagina</h1>
 	<a href="{{ route('home') }}">Regresar al home</a>
+	{{ $errors }}
  </body>	
 </html>
