@@ -1,14 +1,30 @@
 
-// Fonts
+ // Fonts
 @import url("https://fonts.googleapis.com/css?family=Raleway:300,400,600");
 
 // Variables
 @import "variables";
 
 // Bootstrap
-@import '~bootstrap/scss/bootstrap';
-
-.navbar-laravel {
+@import '~bootstrap/scss/bootstrap' ;
+/* 
+	npm run dev  - Este comando es para compilar los archivos sass 
+	npm run watch - Este comando esta a la escucha para ejecutar las tareas en webpack.mix cuando detecte un cambio en los archivos fuente
+*/
+/*.navbar-laravel {
   background-color: #fff;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.04);
 }
+.active{
+	 text-decoration: none;
+	 color: green;
+}
+.error{
+	 color: red;
+	 font-size: 12px;
+}
+nav{
+	width: 100%;
+	display: flex;
+	justify-content: space-around;
+}*/
