@@ -7,19 +7,19 @@
       {!! csrf_field() !!}
       <label for="nombre">
          Nombre
-         <input type="text" name="nombre" value="{{$message->nombre}}">
+         <input class="form-control" type="text" name="nombre" value="{{$message->nombre}}">
          {!! $errors->first('nombre', '<span class=error>:message</span>') !!}
       </label><br>
       <label for="email">
          Email
-         <input type="email" name="email" value="{{$message->email}}">
+         <input class="form-control" type="email" name="email" value="{{$message->email}}">
          {!! $errors->first('email', '<span class=error>:message</span>') !!}
       </label><br>
       <label for="mensaje">
          Mensaje
-         <textarea name="mensaje" cols="30" rows="10">{{$message->mensaje}}</textarea>
+         <textarea class="form-control" name="mensaje" cols="30" rows="10">{{$message->mensaje}}</textarea>
          {!! $errors->first('mensaje', '<span class=error>:message</span>') !!}
       </label><br>
-      <input type="submit" value="Enviar">
+      <input class="btn btn-primary" type="submit" value="Enviar">
       </form>
 @stop

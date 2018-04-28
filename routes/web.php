@@ -19,8 +19,8 @@
 	$user->save();
 
 	return $user;
-});
-*/
+});*/
+
 /*//forma de utilizar un middleware
 Route::get('/', ['as' => 'home', 'uses' => 'PageController@home'])->middleware('example');*/
 Route::get('/', ['as' => 'home', 'uses' => 'PageController@home']);
