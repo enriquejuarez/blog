@@ -3,10 +3,12 @@
 @import url("https://fonts.googleapis.com/css?family=Raleway:300,400,600");
 
 // Variables
-@import "variables";
+/* @import "variables"; */
 
 // Bootstrap
 @import '~bootstrap/scss/bootstrap' ;
+
+@import "components/navbar";
 /* 
 	npm run dev  - Este comando es para compilar los archivos sass 
 	npm run watch - Este comando esta a la escucha para ejecutar las tareas en webpack.mix cuando detecte un cambio en los archivos fuente
